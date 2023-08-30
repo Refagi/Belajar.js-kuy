@@ -1,35 +1,35 @@
-// function changeMe(arr) {
-//     for (let i = 0; i < arr.length; i++){
-//      let name = arr[i][0] + " " + arr[i][1]//untuk menghasilkan nama lengkapnya
-//      let umur = 0;
-//      if ((2023 - arr[i][3]).toString() === 'NaN'){//dijasikan string agar terbaca dengan === 'NaN' nya
-//         umur = 'Invalid Birth Year'
-//      } else {
-//         umur = 2023 - arr[i][3]
-//      }
-//      let profile = {
-//         firstName: arr[i][0],
-//         lastName: arr[i][1],
-//         gender: arr[i][2],
-//         age: umur
-//      }
-//      console.log(`${name}:`)
-//      console.log(profile)
-//     }
-//     // you can only write your code here!
-//   }
-//   // TEST CASES
-//   changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]); // 1. Christ Evans:
-//   // Christ Evans: { firstName: 'Christ',
-//   //   lastName: 'Evans',
-//   //   gender: 'Male',
-//   //   age: 41 } 2023 - 1982 = 41 kan yak wkwk
-//   // Robert Downey: { firstName: 'Robert',
-//   //   lastName: 'Downey',
-//   //   gender: 'Male',
-//   //   age: 'Invalid Birth Year' }
+function changeMe(arr) {
+    for (let i = 0; i < arr.length; i++){
+     let name = arr[i][0] + " " + arr[i][1]//untuk menghasilkan nama lengkapnya
+     let umur = 0;
+     if ((2023 - arr[i][3]).toString() === 'NaN'){//dijasikan string agar terbaca dengan === 'NaN' nya
+        umur = 'Invalid Birth Year'
+     } else {
+        umur = 2023 - arr[i][3]
+     }
+     let profile = {
+        firstName: arr[i][0],
+        lastName: arr[i][1],
+        gender: arr[i][2],
+        age: umur
+     }
+     console.log(`${name}:`)
+     console.log(profile)
+    }
+    // you can only write your code here!
+  }
+  // TEST CASES
+  changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]); // 1. Christ Evans:
+  // Christ Evans: { firstName: 'Christ',
+  //   lastName: 'Evans',
+  //   gender: 'Male',
+  //   age: 41 } 2023 - 1982 = 41 kan yak wkwk
+  // Robert Downey: { firstName: 'Robert',
+  //   lastName: 'Downey',
+  //   gender: 'Male',
+  //   age: 'Invalid Birth Year' }
 
-//   changeMe([]); // ""
+  changeMe([]); // ""
 
 /*
 Diberikan sebuah function shoppingTime(memberId, money) yang menerima dua parameter berupa string dan number.
@@ -56,61 +56,61 @@ maka output:
 { memberId: '324193hDew2', money: 700000, listPurchased: [ 'Baju Zoro', 'Sweater Uniklooh' ], changeMoney: 25000 }
 */
 
-// function shoppingTime(memberId, money) {
-//   let sele = {// buat obj barang dan harga
-//     "Sepatu Stacattu": 1500000,
-//     "Baju Zoro": 500000,
-//     "Baju H&N": 250000,
-//     "Sweater Uniklooh": 175000,
-//     "Casing Handphone": 50000,
-//   };
-//   let produk = [];
-//   let modal = money; //masukan money ke variable untuk mengubah nama
-//   for (const key in sele) { //looping obj
-//     if (modal >= sele[key]) {//jika money lebih besar dari sele[key] sele[key] itu harga dari masing" barang
-//       let price = sele[key];//maka masukan harga barang" ke variable baru
-//       modal -= price; // model = model - price, jika money tidak lebih besar = sele[key], maka false
-//       produk.push(key);// masukan key, key itu nama barang" nya
-//     } //misal, harga barang paling murah 50000,lalu mempunyai money 60000,nah berrti masih bisa membeli satu barang 
-//   }//kalau money < dari 50000 maka false kan gacukup uang
-//   if (money < 50000) {
-//     return "Mohon maaf, uang tidak cukup";
-//   }
-//   let obj = {
-//     memberId: memberId,
-//     money: money,
-//     listPurchased: produk,
-//     changeMoney: modal,
-//   };
-//   if (memberId !== "" && money > 50000) {
-//     return obj;
-//   } else {
-//     return "Mohon maaf, toko X hanya berlaku untuk member saja";
-//   }
+function shoppingTime(memberId, money) {
+  let sele = {// buat obj barang dan harga
+    "Sepatu Stacattu": 1500000,
+    "Baju Zoro": 500000,
+    "Baju H&N": 250000,
+    "Sweater Uniklooh": 175000,
+    "Casing Handphone": 50000,
+  };
+  let produk = [];
+  let modal = money; //masukan money ke variable untuk mengubah nama
+  for (const key in sele) { //looping obj
+    if (modal >= sele[key]) {//jika money lebih besar dari sele[key] sele[key] itu harga dari masing" barang
+      let price = sele[key];//maka masukan harga barang" ke variable baru
+      modal -= price; // model = model - price, jika money tidak lebih besar = sele[key], maka false
+      produk.push(key);// masukan key, key itu nama barang" nya
+    } //misal, harga barang paling murah 50000,lalu mempunyai money 60000,nah berrti masih bisa membeli satu barang 
+  }//kalau money < dari 50000 maka false kan gacukup uang
+  if (money < 50000) {
+    return "Mohon maaf, uang tidak cukup";
+  }
+  let obj = {
+    memberId: memberId,
+    money: money,
+    listPurchased: produk,
+    changeMoney: modal,
+  };
+  if (memberId !== "" && money > 50000) {
+    return obj;
+  } else {
+    return "Mohon maaf, toko X hanya berlaku untuk member saja";
+  }
 
-//   // you can only write your code here!
-// }
+  // you can only write your code here!
+}
 
-// // TEST CASES
-// console.log(shoppingTime("1820RzKrnWn08", 2475000));
-// //{ memberId: '1820RzKrnWn08',
-// // money: 2475000,
-// // listPurchased:
-// //  [ 'Sepatu Stacattu',
-// //    'Baju Zoro',
-// //    'Baju H&N',
-// //    'Sweater Uniklooh',
-// //    'Casing Handphone' ],
-// // changeMoney: 0 }
-// console.log(shoppingTime("82Ku8Ma742", 170000));
-// //{ memberId: '82Ku8Ma742',
-// // money: 170000,
-// // listPurchased:
-// //  [ 'Casing Handphone' ],
-// // changeMoney: 120000 }
-// console.log(shoppingTime("", 2475000)); //Mohon maaf, toko X hanya berlaku untuk member saja
-// console.log(shoppingTime("234JdhweRxa53", 15000)); //Mohon maaf, uang tidak cukup
-// console.log(shoppingTime()); ////Mohon maaf, toko X hanya berlaku untuk member saja
+// TEST CASES
+console.log(shoppingTime("1820RzKrnWn08", 2475000));
+//{ memberId: '1820RzKrnWn08',
+// money: 2475000,
+// listPurchased:
+//  [ 'Sepatu Stacattu',
+//    'Baju Zoro',
+//    'Baju H&N',
+//    'Sweater Uniklooh',
+//    'Casing Handphone' ],
+// changeMoney: 0 }
+console.log(shoppingTime("82Ku8Ma742", 170000));
+//{ memberId: '82Ku8Ma742',
+// money: 170000,
+// listPurchased:
+//  [ 'Casing Handphone' ],
+// changeMoney: 120000 }
+console.log(shoppingTime("", 2475000)); //Mohon maaf, toko X hanya berlaku untuk member saja
+console.log(shoppingTime("234JdhweRxa53", 15000)); //Mohon maaf, uang tidak cukup
+console.log(shoppingTime()); ////Mohon maaf, toko X hanya berlaku untuk member saja
 
 
 
