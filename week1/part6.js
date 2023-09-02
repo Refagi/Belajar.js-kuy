@@ -105,3 +105,92 @@
 //     }
 //     console.log(h)
 //     }
+
+// let cek = 5;
+// let plus = 1;
+// for (let i = 0; i < cek; i++){
+//     let result = '';
+//     for (let j = 0; j <= i; j++){
+//         result += plus++ + ' '
+//     }
+//     console.log(result)
+// }
+// output hasil
+// 1 
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// 11 12 13 14 15
+
+
+let cek1 = 5
+for (let i = 0; i < cek1; i++){
+    let result1 = '';
+    for (let j = 0; j < cek1 - i; j++){
+        result1 += j + i + 1 + ' '
+    }
+    console.log(result1)
+}
+//hasil output
+// 1 2 3 4 5 
+// 2 3 4 5
+// 3 4 5
+// 4 5
+// 5
+
+
+// let cek2 = 5
+// for (let i = 0; i < cek2; i++){
+//     let result2 = '';
+//     for (let j = 0; j <= i; j++){
+//         result2 += j + i + 1 + ' '
+//     }
+//     console.log(result2)
+// }
+//hasil output
+// 1 
+// 2 3
+// 3 4 5
+// 4 5 6 7
+// 5 6 7 8 9
+
+
+// let cek3 = 5
+// for (let i = 0; i < cek3; i++){
+//     let plusThird = i + 1
+//     let result2 = plusThird + ' ';
+//     for (let j = 1; j <= i; j++){
+//         plusThird += cek3 - j
+//         result2 += plusThird + ' '
+//     }
+//     console.log(result2)
+// }
+//ouput hasil
+// 1 
+// 2 6
+// 3 7 10
+// 4 8 11 13
+// 5 9 12 14 15         
+
+
+let jumlahAngkot = 10;
+let angkotBeroprasi = 6;
+let noAngkot = 1;
+
+while(noAngkot <= angkotBeroprasi){
+  console.log('Angkot dengan no' + ' ' + noAngkot + ' ' + 'beroperasi dengan baik')
+  noAngkot++
+}
+for (let i = 7; i <= jumlahAngkot; i++){
+  console.log('Angkot dengan no' + ' ' + i + ' ' + 'sedang tidak beroperasi ')
+}
+// Angkot dengan no 1 beroperasi dengan baik
+// Angkot dengan no 2 beroperasi dengan baik
+// Angkot dengan no 3 beroperasi dengan baik
+// Angkot dengan no 4 beroperasi dengan baik
+// Angkot dengan no 5 beroperasi dengan baik
+// Angkot dengan no 6 beroperasi dengan baik
+// Angkot dengan no 7 sedang tidak beroperasi
+// Angkot dengan no 8 sedang tidak beroperasi
+// Angkot dengan no 9 sedang tidak beroperasi
+// Angkot dengan no 10 sedang tidak beroperasi
