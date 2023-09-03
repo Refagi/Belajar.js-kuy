@@ -24,7 +24,8 @@ function perkalianUnik(arr) {
   let result2 = [];
   let cek = 1;
   for (let j = 0; j < arr.length; j++) {
-    cek *= arr[j]; //mengalikan semua data dalam array [j]
+    cek *= arr[j]; //mengalikan semua data dalam array [j], misal [2, 4, 6]
+    //cek = cek * arr[j], cek = 1 * 2 = 2, >>>  cek = 2 * 4 = 8, >>> cek = 8 * 6 = 48 
   }
   for (let h = 0; h < arr.length; h++) {
     //hasil perkalian [j] dibagi masing masing data dalam array[h] dan di push / dimasukan ke dlm variable []
