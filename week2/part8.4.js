@@ -110,4 +110,6 @@ function palindrome(kata) {
   console.log(pasanganTerbesar(910233)); // 91
   console.log(pasanganTerbesar(71856421)); // 85
   console.log(pasanganTerbesar(79918293)); // 99
+//jadi, let terbesar = cekString[j] + cekString[j + 1] akan menghasilkan angka berpasangan
+  //miasl 641573 menjadi 64, 15, 73, lalu cari  yg paling besar yaitu 73
   
