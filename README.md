@@ -1,1 +1,1 @@
-kosong kaya hati
+RPN
