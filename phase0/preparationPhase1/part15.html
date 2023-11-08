@@ -1,0 +1,183 @@
+<!-- Mengenal Lebih Dekat HTML
+
+HTML (HyperText Markup Language) adalah fondasi dari setiap halaman web yang kita lihat. 
+Ini adalah bahasa markup yang digunakan untuk membuat struktur dan konten dari sebuah halaman web.
+Dalam artikel ini, kita akan membahas HTML dengan lebih detail dan memberikan contoh kode untuk mengilustrasikan 
+konsep-konsepnya.
+
+Dasar-dasar HTML
+Setiap dokumen HTML dimulai dengan elemen <html>, diikuti oleh <head> dan <body>. Elemen <head> berisi informasi metadata tentang halaman seperti judul dan tautan ke file eksternal, sedangkan elemen <body> berisi konten yang akan ditampilkan kepada pengguna.
+
+Contoh: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Halaman Web</title>
+</head>
+<body>
+    <h1>Selamat Datang di Website Saya</h1>
+    <p>Ini adalah contoh halaman web yang dibuat menggunakan HTML.</p>
+</body>
+</html>
+
+
+<!-- Elemen Teks
+Elemen-elemen teks digunakan untuk mengatur konten teks dalam halaman web.
+
+<h1> sampai <h6>: Menggunakan untuk judul dengan tingkat prioritas yang berbeda. <h1> memiliki prioritas tertinggi.
+<p>: Elemen untuk paragraf teks.
+<strong> dan <em>: Membuat teks menjadi tebal dan miring secara bergantian.
+<a>: Digunakan untuk membuat tautan (link) ke halaman lain atau sumber eksternal.
+
+Contoh: -->
+
+<h1>Judul Utama</h1>
+<p>Ini adalah paragraf teks biasa. <strong>Teks tebal</strong> dan <em>teks miring</em>.</p>
+<a href="https://www.contoh.com">Kunjungi Contoh.com</a>
+
+
+<!-- Gambar
+Kalian dapat menyisipkan gambar dalam halaman menggunakan elemen <img>. Kalian juga dapat mengatur lebar dan tinggi
+gambar.
+
+Contoh: -->
+
+<img src="gambar.jpg" alt="Deskripsi Gambar" width="300" height="200">
+
+
+<!-- Daftar
+Kalian dapat membuat daftar dengan menggunakan elemen-elemen seperti <ul> (unordered list) untuk daftar tak 
+berurutan, dan <ol> (ordered list) untuk daftar berurutan. Setiap elemen daftar di dalamnya didefinisikan dengan 
+elemen <li>.
+
+Contoh: -->
+
+<ul>
+    <li>Item pertama</li>
+    <li>Item kedua</li>
+    <li>Item ketiga</li>
+</ul>
+
+<ol>
+    <li>Langkah pertama</li>
+    <li>Langkah kedua</li>
+    <li>Langkah ketiga</li>
+</ol>
+
+
+<!-- Formulir
+Elemen <form> digunakan untuk membuat formulir interaktif yang memungkinkan pengguna mengirimkan data. 
+Kalian dapat menggunakan elemen <input> untuk membuat kotak input teks, tombol, checkbox, dan lainnya.
+
+Contoh: -->
+
+<form action="/proses" method="post">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <input type="submit" value="Kirim">
+</form>
+
+
+<!-- Selektor dan Properti
+Selektor CSS
+Selektor CSS adalah cara untuk memilih elemen yang akan diberi gaya. Berikut beberapa contoh selektor:
+
+Elemen Selektor: Menggunakan nama elemen (contoh: p, h1, div) untuk memilih semua elemen dengan jenis tertentu.
+p {
+  color: blue;
+}
+
+Class Selektor: Menggunakan nama kelas (contoh: .kelas) untuk memilih elemen dengan kelas tertentu.
+.highlight {
+  background-color: yellow;
+}
+
+ID Selektor: Menggunakan ID (contoh: #id) untuk memilih elemen dengan ID tertentu.
+#header {
+  font-size: 24px;
+}
+
+Properti CSS
+Properti CSS adalah atribut yang mengontrol tampilan elemen. Berikut beberapa contoh properti:
+
+Warna Teks: Mengubah warna teks pada elemen.
+p {
+  color: green;
+}
+
+Ukuran Font: Mengatur ukuran font pada elemen.
+h1 {
+  font-size: 32px;
+}
+
+Margin dan Padding: Mengatur jarak antara elemen dan elemen lain atau tepi elemen.
+.box {
+  margin: 10px;
+  padding: 20px;
+}
+
+Tata Letak (Layout)
+Display
+CSS memiliki properti display yang mengontrol tampilan elemen. Beberapa nilai umumnya adalah:
+
+block: Elemen akan mengambil seluruh lebar yang tersedia dan berada di baris baru.
+inline: Elemen hanya akan memakan sejumlah lebar yang diperlukan dan tetap dalam satu baris dengan elemen lain.
+inline-block: Kombinasi dari inline dan block.
+
+Position
+Properti position mengontrol cara elemen ditempatkan di halaman:
+
+static: Nilai default. Elemen akan mengikuti alur normal tata letak.
+relative: Elemen diposisikan relatif terhadap posisi normalnya.
+absolute: Elemen ditempatkan relatif terhadap elemen pengantarnya.
+fixed: Elemen akan tetap di posisi yang sama bahkan saat halaman di-scroll.
+
+Pseudo-Class dan Pseudo-Element
+Pseudo-Class
+Pseudo-class adalah cara untuk memberikan gaya pada elemen dalam kondisi tertentu:
+
+:hover: Mengubah tampilan saat kursor diarahkan ke elemen.
+:active: Mengubah tampilan saat elemen sedang diklik.
+:nth-child(n): Menggunakan pola elemen tertentu (misalnya, setiap elemen ke-3).
+
+Contoh penggunaan:
+.button:hover {
+  background-color: lightblue;
+}
+
+
+Pseudo-Element
+Pseudo-element memungkinkan Kalian memanipulasi bagian tertentu dari elemen:
+
+::before: Menambahkan isi sebelum elemen.
+::after: Menambahkan isi setelah elemen.
+
+Contoh penggunaan:
+blockquote::before {
+  content: "❝";
+}
+
+
+Animasi CSS
+CSS juga memungkinkan pembuatan animasi sederhana tanpa menggunakan JavaScript:
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  animation: move 2s ease infinite;
+} -->

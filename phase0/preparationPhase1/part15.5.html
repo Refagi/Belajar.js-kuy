@@ -1,0 +1,67 @@
+// <!-- Pengenalan DOM:
+// DOM (Document Object Model) adalah representasi struktural dari halaman web yang memungkinkan JavaScript untuk 
+// berinteraksi dengan elemen HTML dan CSS. Setiap elemen dalam halaman web direpresentasikan sebagai objek dalam DOM, 
+// dan Kalian dapat mengakses, memanipulasi, dan mengubah elemen-elemen ini menggunakan JavaScript.
+
+// Berikut adalah contoh-contoh kode untuk mengilustrasikan konsep-konsep ini:
+
+// #### 1. Mengubah Konten Elemen HTML:-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh DOM Manipulasi</title>
+</head>
+<body>
+  <h1 id="judul">Selamat Datang</h1>
+  <button id="tombol">Ubah Judul</button>
+
+  <script>
+    // Mengambil referensi elemen berdasarkan ID
+    const judulElemen = document.getElementById('judul');
+    const tombolElemen = document.getElementById('tombol');
+
+    // Menambahkan event listener untuk tombol
+    tombolElemen.addEventListener('click', function() {
+      judulElemen.textContent = 'Halo Dunia!';
+    });
+  </script>
+</body>
+</html>
+
+
+<!-- #### 2. Menambahkan dan Menghapus Elemen: -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh DOM Manipulasi</title>
+</head>
+<body>
+  <ul id="daftar">
+    <li>Apel</li>
+    <li>Pisang</li>
+    <li>Jeruk</li>
+  </ul>
+  <button id="tambah">Tambah Buah</button>
+  <button id="hapus">Hapus Buah Terakhir</button>
+
+  <script>
+    const daftarElemen = document.getElementById('daftar');
+    const tombolTambah = document.getElementById('tambah');
+    const tombolHapus = document.getElementById('hapus');
+
+    tombolTambah.addEventListener('click', function() {
+      const newBuah = document.createElement('li');
+      newBuah.textContent = 'Anggur';
+      daftarElemen.appendChild(newBuah);
+    });
+
+    tombolHapus.addEventListener('click', function() {
+      const lastBuah = daftarElemen.lastElementChild;
+      if (lastBuah) {
+        daftarElemen.removeChild(lastBuah);
+      }
+    });
+  </script>
+</body>
+</html> 
+
