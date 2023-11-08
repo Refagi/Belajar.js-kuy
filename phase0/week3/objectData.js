@@ -62,3 +62,36 @@ for (const key in myObj) {
 // detail: [object Object]
 // kelakuan: baik
 
+// function declaration
+function buatobj (nama, kelas, npm){
+  let data = {}
+  data.nama = nama
+  data.kelas = kelas
+  data.npm = npm
+  return data
+}
+let dataNew = buatobj('Refagi', 'R1Q', '129182353920')
+console.log(dataNew)//{ nama: 'Refagi', kelas: 'R1Q', npm: '129182353920' 
+
+//constructor
+function buatobj2 (nama, kelas, npm, jurusan){
+  this.nama = nama
+  this.kelas = kelas
+  this.npm = npm
+  this.jurusan = jurusan
+}
+let count = new buatobj2 ('refagi', 'BB', '9121414815752', 'teknik informatika')
+console.log(count)/*buatobj2 {
+  nama: 'refagi',
+  kelas: 'BB',
+  npm: '9121414815752',
+  jurusan: 'teknik informatika'
+}*/
+
+//object literal
+let obj = {}
+obj.data = function (){
+  console.log('reno faza givaro')
+  console.log('oi kiyomasa')
+}
+obj.data()
