@@ -132,3 +132,14 @@ let obj = {
 let cekObj = obj.nama1 && obj.nama2
 console.log(cekObj)//''
 /*ini kebalikannya mencari nilai yang false */
+
+//debugger 
+//untuk mengcari bug jika terjadi di suatu code yang coplex
+//jika ada suatu code tinggal tambahkan kata debugger
+/*
+contoh:
+function arr (){
+    debugger
+    ......(codenya)
+}
+ */
