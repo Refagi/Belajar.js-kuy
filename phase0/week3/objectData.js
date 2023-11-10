@@ -95,3 +95,59 @@ obj.data = function (){
   console.log('oi kiyomasa')
 }
 obj.data()
+
+
+
+
+
+//method getter and setter pada objek
+
+//misal 
+const person = {
+  nama1 : 'reno',
+  nama2 : 'faza',
+  namalengkap : 'reno faza'
+}
+//kalau gini, kalau mau ubah namaLengkap harus merubah satu satu
+person.nama1 = 'givaro'
+person.namalengkap = person.nama1 + person.nama2
+console.log(person.namalengkap)//givarofaza
+
+//bisa juga begini pake function
+const person = {
+  nama1 : 'reno',
+  nama2 : 'faza',
+  namaLengkap : function(){
+      return `${this.nama1} ${this.nama2}`
+  }
+}
+person.nama1 = 'givaro'
+console.log(person.namaLengkap())//givaro faza
+
+//nah kalo pake cara getter gini cara panggilnya tidak usah pake function lagi
+const person = {
+  nama1 : 'reno',
+  nama2 : 'faza',
+  get namaLengkap(){
+      return `${this.nama1} ${this.nama2}`
+  }
+}
+person.nama1 = 'givaro'
+console.log(person.namaLengkap)//givaro faza
+
+//cara setter
+const person = {
+  nama1 : 'reno',
+  nama2 : 'faza',
+  get namaLengkap(){
+      return `${this.nama1} ${this.nama2}`
+  },
+  set namaLengkap(count){
+      let arr = count.split(' ')
+      this.nama1 = arr[0]
+      this.nama2 = arr[1]
+      this.nama3 = arr[2]
+  }
+}
+person.namaLengkap = 'reno faza givaro'
+console.log(person.nama3)//givaro
