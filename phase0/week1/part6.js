@@ -218,3 +218,38 @@ for (let i = 7; i <= jumlahAngkot; i++){
 // Angkot dengan no 9 sedang tidak beroperasi
 // Angkot dengan no 10 sedang tidak beroperasi
 
+function urutan(arr){
+    for (let i = 0; i < arr; i++){
+        let result = ''
+        for (let j = 0; j <= i; j++){
+            result += j + 1
+        }
+        console.log(result)
+    }
+}
+console.log(urutan(5))
+/*
+1
+12
+123
+1234
+12345
+ */
+
+function persegi (str){
+    for (let i = 1; i <= str; i++){
+        let result = ''
+        for (let j = 1; j <= str; j++){
+            result += i + ' '
+        }
+        console.log(result)
+    }
+}
+console.log(persegi(5))
+/**
+ 1 1 1 1 1 
+2 2 2 2 2
+3 3 3 3 3
+4 4 4 4 4
+5 5 5 5 5
+ */
