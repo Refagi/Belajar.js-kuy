@@ -96,7 +96,24 @@ obj.data = function (){
 }
 obj.data()
 
+//menggunakan Object.create 
+const dataOrang = {
+  jamTidur : function(waktu){
+      this.umur -= waktu
+      console.log(`lama waktu tidur ${this.nama} adalah ${this.jamTidur}`)
+  }
+}
 
+
+function data (nama, hobby, umur){
+  let obj = Object.create(dataOrang)
+  obj.nama = nama
+  obj.hobby = hobby
+  obj.umur = umur
+  return obj
+}
+const count2 = data('Refagi', 'ngoding', 19)
+console.log(count2)
 
 
 
