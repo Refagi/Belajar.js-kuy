@@ -153,9 +153,25 @@ function digitPerkalianMinimum(angka) {
   console.log(checkAB('barbarian')); // true
   console.log(checkAB('bacon and meat')); // false
   
-  
-  
-  
-  
-  
+  //ada cara yg lebih efesian
+  const checkAB = (num) => {
+    let change = num.toLowerCase()
+ 
+    for (let i = 0; i < change.length; i++){
+    if (change[i] === 'a' && change[i + 4] === 'b' ){
+       return true
+    }else if (change[i] === 'b' && change[i + 4] === 'a' ){
+       return true
+    }
+ }
+ return false
+ }
+ 
+ 
+  console.log(checkAB('lane borrowed')); // true
+  console.log(checkAB('i am sick')); // false
+  console.log(checkAB('you are boring')); // true
+  console.log(checkAB('barbarian')); // true
+  console.log(checkAB('bacon and meat')); // false
+  console.log(checkAB('abayyya')); // false
   
