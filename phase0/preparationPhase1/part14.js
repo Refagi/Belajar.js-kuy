@@ -51,5 +51,26 @@ function multiply(a, b) {
   const sum = numbers.reduce((total, num) => total + num, 0); // Menghasilkan 15
   
   
-  
+  const namaMhs = ['reno', 'faza', 'givaro'];
+
+const mahasiswa = namaMhs.map(ganteng => {
+   return ganteng.length
+})
+console.log(mahasiswa)
+
+
+let test = count => `hello ${count}` 
+console.log(test('refagi'))
+
+
+const vis = (cek1, cek2) => {
+   return `assalamualaikum ${cek1} dan ${cek2}`
+}
+console.log(vis('reno', 'faza'))
+
+//buat menghasilkan object
+const visited = namaMhs.map((name) => ({ name : name, 
+   longName : name.length
+}))
+console.log(visited)
   
