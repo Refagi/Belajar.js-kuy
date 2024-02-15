@@ -1,0 +1,15 @@
+{
+  "name": "latihantesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testCode.js",
+  "scripts": {
+    "testOne": "jest",
+    "testTwo": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
