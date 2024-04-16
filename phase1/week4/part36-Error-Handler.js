@@ -38,6 +38,77 @@ Penggunaan error handler yang baik membantu menjaga keandalan dan kualitas aplik
 sambil memberikan pengalaman yang lebih baik kepada pengguna akhir.*/
 
 
+// sebelum kita membuat file error handler, kita akan membuat 2 utils function untuk support error handler 
+// kita agar semakin efisien.
+
+// Utils API Error
+// Function ini fungsinya untuk membuat instance response API error dalam project kita. 
+// karena struktur error yang kita buat akan seperti ini :
+
+// {
+//   "code": 404,
+//   "message": "Message error kalian",
+//   "stack": "balikan error sebenarnya dari server kita"
+// }
+
+// jadi kalian hanya perlu membuat 1 class instance agar dipakai berkali kali ketika kalian ingin 
+// melakukan response error.
+// buatlah file ApiError.js didalam folder utils.
+
+// utils/ApiError.js
+class ApiError extends Error {
+  constructor(statusCode, message, isOperational = true, stack = '') {
+    super(message);
+    this.statusCode = statusCode;
+    this.isOperational = isOperational;
+    if (stack) {
+      this.stack = stack;
+    } else {
+      Error.captureStackTrace(this, this.constructor);
+    }
+  }
+}
+
+module.exports = ApiError;
+
+
+// jadi kalian bisa menggunakan instance error ini untuk membuat response error:
+// error = new ApiError(statusCode, message, false, err.stack);
+
+
+// Utils catchAsync
+// Function ini fungsinya untuk menangkap semua block catch yang ada di controller, jadi kita tidak perlu 
+// membuat try catch lagi. ini utils paling maut untuk clean code dalam backend.
+
+// NOTE: catchAsync ini menggunakan konsep High-order function, jika kalian belum belajar silahkan explore 
+// terlebih dahulu tentang konsep ini.
+// https://medium.com/paradigma-fungsional/higher-order-function-paradigma-fungsional-praktis-part-4-c836bd23a82
+
+// buatlah file catchAsync.js di folder utils:
+
+// utils/catchAsync.js
+const catchAsync = (fn) => (req, res, next) => {
+  Promise.resolve(fn(req, res, next)).catch((err) => next(err));
+};
+
+module.exports = catchAsync;
+
+
+// ini adalah contoh kombo maut ApiError instance + Catch Async:
+
+const catchAsync = require('../utils/catchAsync');
+const { userService } = require('../services');
+const ApiError = require('../utils/ApiError');
+
+const getUser = catchAsync(async (req, res) => {
+  const user = await userService.getUserById(req.params.userId);
+  if (!user) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
+  }
+  res.send(user);
+});
+
+
 
 //Error Handler Middleware
 
