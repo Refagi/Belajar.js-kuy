@@ -253,3 +253,108 @@ console.log(persegi(5))
 4 4 4 4 4
 5 5 5 5 5
  */
+
+
+
+//besar ke kecil
+function segitigaRataKanan1 (number){
+    let result = ''
+    for (let i = 1; i <= number; i++){
+      let tampung = ''
+      for (let j = 1; j <= number; j++){
+        if(j >= i){
+          tampung += '*'
+        } else {
+          tampung += ' '
+        }
+      }
+      result += tampung + '\n'
+    }
+    return result
+  }
+  console.log(segitigaRataKanan1(5))
+  /*
+  *****
+   ****
+    ***
+     **
+      *
+  */
+  
+  
+  //kecil ke besar
+  function segitigaRataKanan2 (number){
+    let result = ''
+    for (let i = number; i >= 1; i--){
+      let tampung = ''
+      for (let j = 1; j <= number; j++){
+        if(j >= i){
+          tampung += '*'
+        } else {
+          tampung += ' '
+        }
+      }
+      result += tampung + '\n'
+    }
+    return result
+  }
+  console.log(segitigaRataKanan2(5))
+  /*
+      *
+     **
+    ***
+   ****
+  ***** 
+  */
+  
+  
+  
+  //kecil ke besar
+  function segitigaRataTengah1 (number){
+    let result = ''
+    for (let i = number; i >= 1; i--){
+      let tampung = ''
+      for (let j = 1; j <= number; j++){
+        if(j >= i){
+          tampung += '* '
+        } else {
+          tampung += ' '
+        }
+      }
+      result += tampung + '\n'
+    }
+    return result
+  }
+  console.log(segitigaRataTengah1(5))
+  /*
+      *
+     * *
+    * * *
+   * * * *
+  * * * * * 
+  */
+  
+  //besar ke kecil
+  function segitigaRataTengah2 (number){
+    let result = ''
+    for (let i = 1; i <= number; i++){
+      let tampung = ''
+      for (let j = 1; j <= number; j++){
+        if(j >= i){
+          tampung += '* '
+        } else {
+          tampung += ' '
+        }
+      }
+      result += tampung + '\n'
+    }
+    return result
+  }
+  console.log(segitigaRataTengah2(5))
+  /*
+  * * * * *
+   * * * *
+    * * *
+     * *
+      *
+  */
