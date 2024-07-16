@@ -358,3 +358,23 @@ function segitigaRataKanan1 (number){
      * *
       *
   */
+
+
+  let number = 5;
+
+  for (let i = 1; i <= number; i++){
+    let result = "";
+    for (let j = 1; j <= i; j++){
+      if (i % 2 == 0){
+        result += "X ";
+      } else {
+        result += j + i - 1 + " ";
+      }
+    }
+    console.log(result);
+  }
+  // 1
+  // X X
+  // 3 4 5
+  // X X X X
+  // 5 6 7 8 9
